@@ -1,65 +1,72 @@
-# Online Book Review Server-Side Application
+# SOLUTIONS OF WEEK 4 PEER-GRADED ASSIGNMENT. :- 😇✅👇
+## Do follow these below mentioned steps for solving this assignment. 👇
+## Firstly download these above photos mentioned in this repository in some folder on your PC for future use.   !!! [ If while submitting in end there is ERROR of content issue then just do some slight editing on the images. ]
+# TASK 1 :- 👇 [ USE THIS IMAGE ]
+## TITLE :- ```BOOK LIST AVAILABLE```
+![1-getallbooks](https://github.com/Uday-Pratap-hub/IBM-Developing-Back-End-Apps-with-Node.js-and-Express/assets/67860426/c513eae5-3c5c-407e-b607-d3f39370c5dd)
 
-Welcome to the Online Book Review Server-Side Application, the final project for the IBM Course "Developing back-end apps with Node.js and Express." This application allows users to manage books, write reviews, and interact with book-related data. It utilizes MySQL as the database and Sequelize.js as the ORM (Object-Relational Mapping) tool.
+# TASK 2 :- 👇 [ USE THIS IMAGE ]
+## TITLE :- ```IBN BASED BOOK RETRIEVAL```
+![2-gedetailsISBN](https://github.com/Uday-Pratap-hub/IBM-Developing-Back-End-Apps-with-Node.js-and-Express/assets/67860426/e1edb608-cb5f-4955-b750-245b9441a8bb)
 
-## Quick Brief
+# TASK 3 :- 👇 [ USE THIS IMAGE ]
+## TITLE :- ```BOOKS BY AUTHOR```
+![3-getbooksbyauthor](https://github.com/Uday-Pratap-hub/IBM-Developing-Back-End-Apps-with-Node.js-and-Express/assets/67860426/1056f36b-10b4-4a2e-9165-26d65ac5eec6)
 
-The Online Book Review Server-Side Application provides a RESTful API for managing user accounts, books, and reviews. Users can register, log in, and create reviews for books. Books can be added, updated, and deleted. Reviews can be read, edited, and deleted. The application aims to provide a seamless experience for book enthusiasts to share their thoughts on books.
+# TASK 4 :- 👇 [ USE THIS IMAGE ]
+## TITLE :- ```BOOKS BY TITLE```
+![4-getbooksbytitle](https://github.com/Uday-Pratap-hub/IBM-Developing-Back-End-Apps-with-Node.js-and-Express/assets/67860426/04bf7aa3-19c0-4ff3-93e9-cdee3caaef6d)
 
-## Getting Started
+# TASK 5 :- 👇 [ USE THIS IMAGE ]
+## TITLE :- ```BOOK REVIEW```
+![5-getbookreview](https://github.com/Uday-Pratap-hub/IBM-Developing-Back-End-Apps-with-Node.js-and-Express/assets/67860426/03e38b15-4166-4c0c-9015-eb8289f3d38a)
 
-Follow these instructions to set up and run the application:
+# TASK 6 :- 👇 [ USE THIS IMAGE ]
+## TITLE :- ```NEW USER REGISRATION.```
+![6-register](https://github.com/Uday-Pratap-hub/IBM-Developing-Back-End-Apps-with-Node.js-and-Express/assets/67860426/07a8493e-fdf2-49d8-8099-8583550dab0a)
 
-### Prerequisites
+# TASK 7 :- 👇 [ USE THIS IMAGE ]
+## TITLE :- ```USER LOGIN PAGE.```
+![7-login](https://github.com/Uday-Pratap-hub/IBM-Developing-Back-End-Apps-with-Node.js-and-Express/assets/67860426/78bb01e6-a066-404c-baef-5c5faab74842)
 
-1. **Node.js**: Ensure you have Node.js installed on your system. You can download it from [nodejs.org](https://nodejs.org/).
+# TASK 8 :- 👇 [ USE THIS IMAGE ]
+## TITLE :- ```MODIFYING BOOK REVIEW```
+![8-reviewadded](https://github.com/Uday-Pratap-hub/IBM-Developing-Back-End-Apps-with-Node.js-and-Express/assets/67860426/8e0af366-fe68-4ff4-b685-5d659d3202c2)
 
-2. **MySQL**: You will need a MySQL database server installed and running. You can download MySQL from [mysql.com](https://www.mysql.com/).
+# TASK 9 :- 👇 [ USE THIS IMAGE ]
+## TITLE :- ```DELETING BOOK REVIEW```
+![9-deletereview](https://github.com/Uday-Pratap-hub/IBM-Developing-Back-End-Apps-with-Node.js-and-Express/assets/67860426/8fd948b3-2fc6-4e47-a326-056c79fdc026)
 
-### Installation
+# TASK 10 :- 👇 
+## DESCRIPTION :- [ USE THE COPY BUTTON BELOW ]
+```
+public_users.get('/async', async function (req, res) {  try {    const bookList = await getBookListAsync('http://localhost:5000/'); //    res.json(bookList);  } catch (error) {    console.error(error);    res.status(500).json({ message: "Error retrieving book list" });  }}); 
+```
 
-1. **Clone the repository**:
+# TASK 11 :- 👇 
+## DESCRIPTION :- [ USE THE COPY BUTTON BELOW ]
+```
+public_users.get('/async/isbn/:isbn', async function (req, res) {  try {    const requestedIsbn = req.params.isbn;    const book = await getBookListAsync("http://localhost:5000/isbn/" + requestedIsbn);    res.json(book);  } catch (error) {    console.error(error);    res.status(500).json({ message: "Error retrieving book details" });  }});
+```
 
-   ```bash
-   git clone <repository-url>
-   ```
+# TASK 12 :- 👇
+## DESCRIPTION :- [ USE THE COPY BUTTON BELOW ]
+```
+public_users.get('/async/author/:author', async function (req, res) {  try {    const requestedAuthor = req.params.author;    const book = await getBookListAsync("http://localhost:5000/author/" + requestedAuthor);    res.json(book);  } catch (error) {    console.error(error);    res.status(500).json({ message: "Error retrieving book details" });  }});
+```
 
-2. **Navigate to the project folder**:
+# TASK 13 :- 👇
+## DESCRIPTION :- [ USE THE COPY BUTTON BELOW ]
+```
+public_users.get('/async/title/:title', async function (req, res) {  try {    const requestedTitle = req.params.title;    const book = await getBookListAsync("http://localhost:5000/title/" + requestedTitle);    res.json(book);  } catch (error) {    console.error(error);    res.status(500).json({ message: "Error retrieving book details" });  }});
+```
 
-   ```bash
-   cd <project-folder>
-   ```
+# TASK 14 :- 👇 ✅
+## DESCRIPTION :- [ USE THE COPY BUTTON BELOW ]
+```
+https://github.com/williamg1750/expressBookReviews
+```
+# So After submitting the Assignment now, you need to do Peer-Reviewing [ Follow the below Video Step by Step for Reference ] :- 👇✅
+https://github.com/Uday-Pratap-hub/IBM-Developing-Back-End-Apps-with-Node.js-and-Express/assets/67860426/597efbe5-dad0-4da3-98a2-c4d57fead5ab
 
-3. **Install dependencies**:
-
-   ```bash
-   npm install
-   ```
-
-4. **Configure the database connection**:
-   
-   - Create a MySQL database for the application.
-   - Set your MySQL database credentials and other environment variables in the `.env` file.
-
-5. **Start the application**:
-
-   ```bash
-   npm start
-   ```
-
-## API Documentation
-
-For detailed API documentation and examples of how to use the endpoints, please take a look at the [API Documentation](https://documenter.getpostman.com/view/28416524/2s9YBxacHG).
-
-## Features
-
-- **User Management**: Register, log in, and manage user accounts.
-- **Book Management**: Add, update, delete, and list books.
-- **Review Management**: Write, edit, delete, and read reviews for books.
-
-## Technologies Used
-
-- **Node.js**: JavaScript runtime environment.
-- **Express.js**: Web application framework for Node.js.
-- **MySQL**: Relational database management system.
-- **Sequelize.js**: Promise-based Node.js ORM for MySQL.
+# SO now as you have completed this course NOW enjoy your CERTIFICATION ... !! ✅😇😎💯😎
